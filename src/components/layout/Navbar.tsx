@@ -1,25 +1,57 @@
 import {motion} from 'framer-motion';
 
+const navbarVariants = {
+    hidden: {},
+    visible: {
+        transition: {
+            staggerChildren: 0.3
+        }
+    }
+}
+
+const itemVariants = {
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 }
+}
+
 export default function Navbar() {
+
+    const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Contacto'];
+
     return(
-        <div>
+        <header>
             <motion.nav
-                className="p-4"
+                className="py-8 flex justify-center"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 1 }}
             >
-                <div className="container mx-auto flex justify-between items-center py-5">
-                    <div className="text-white text-lg font-semibold">
+                <motion.ul 
+                    className="container flex justify-between"
+                    variants={navbarVariants}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    <motion.li 
+                        className="text-white text-lg font-semibold"
+                        variants={itemVariants}
+                    >
                         Nicolás Álvarez
-                    </div>
-                    <div className="space-x-4">
-                        <a href="#" className="text-gray-300 hover:text-white">Inicio</a>
-                        <a href="#" className="text-gray-300 hover:text-white">Sobre mi</a>
-                        <a href="#" className="text-gray-300 hover:text-white">Contacto</a>
-                    </div>
-                </div>
+                    </motion.li>
+                    <motion.ul className='flex gap-10'>
+
+                    {navItems.map((item, index) => (
+                        <motion.li
+                        key={index}
+                        className="text-white text-lg cursor-pointer hover:text-gray-300"
+                        variants={itemVariants}
+                        >
+                            <a href={`/${item.split(' ')}`}>{item}</a>
+                        </motion.li>
+                    ))}
+                    </motion.ul>
+                </motion.ul>
             </motion.nav>
-        </div>
+        </header>
     );
 }
