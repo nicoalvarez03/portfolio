@@ -16,18 +16,19 @@ const itemVariants = {
 
 export default function Navbar() {
 
-    const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Contacto'];
+    const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Contacto']; // defino los elementos del navbar
+    const sectionId = navItems.map(item => item.toLowerCase().replace(/\s+/g, '')); // transformo los elementos en ids válidos
 
     return(
         <header>
             <motion.nav
-                className="py-8 flex justify-center"
+                className="pt-10 pb-15 flex justify-center"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
                 <motion.ul 
-                    className="container flex justify-between"
+                    className="flex justify-between items-center w-full max-w-6xl px-4"
                     variants={navbarVariants}
                     initial="hidden"
                     animate="visible"
@@ -45,8 +46,14 @@ export default function Navbar() {
                         key={index}
                         className="text-white text-lg cursor-pointer hover:text-gray-300"
                         variants={itemVariants}
+                        onClick={() => {
+                            const section = document.getElementById(sectionId[index]);
+                            if(section) {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        }}
                         >
-                            <a href={`/${item.split(' ')}`}>{item}</a>
+                            {item}
                         </motion.li>
                     ))}
                     </motion.ul>
