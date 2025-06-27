@@ -26,7 +26,8 @@ interface ProjectsDataProps {
     tecnologies: {
         title?: string; // opcional, si se quiere mostrar el nombre de la tecnología
         icon: IconType; // Icono de la tecnología
-    }[]
+    }[],
+    repository?: string; // URL del repositorio del proyecto
 }
 
 export const projectsData: ProjectsDataProps[] = [
@@ -130,7 +131,8 @@ export const projectsData: ProjectsDataProps[] = [
                 title: "Cloudinary",
                 icon: SiCloudinary
             }
-        ]
+        ],
+        repository: "https://github.com/nicoalvarez03/airbnb_clone_reactJs"
     },
     {
         id: 2,
@@ -179,7 +181,8 @@ export const projectsData: ProjectsDataProps[] = [
                 title: "JavaScript",
                 icon: IoLogoJavascript
             }
-        ]
+        ],
+        repository: "https://github.com/aAlvarez03/proyecto_cartelera_cine"
     },
     {
         id: 3,
@@ -232,7 +235,8 @@ export const projectsData: ProjectsDataProps[] = [
                 title: "MySQL",
                 icon: SiMysql
             }
-        ]
+        ],
+        repository: "https://github.com/aAlvarez03/CholloSevero"
     },
     {
         id: 4,
@@ -277,7 +281,8 @@ export const projectsData: ProjectsDataProps[] = [
                 title: "JavaScript",
                 icon: IoLogoJavascript
             }
-        ]
+        ],
+        repository: "https://github.com/aAlvarez03/proyecto_1er_trimestre_diw"
     },
     {
         id: 5,
@@ -318,7 +323,8 @@ export const projectsData: ProjectsDataProps[] = [
                 title: "Bootstrap",
                 icon: FaBootstrap
             }
-        ]
+        ],
+        repository: "https://github.com/aAlvarez03/Proyecto_MiniMarket"
     },
     {
         id: 6,
@@ -355,6 +361,7 @@ export const projectsData: ProjectsDataProps[] = [
                 title: "TypeScript",
                 icon: SiTypescript
             }
-        ]
+        ],
+        repository: "https://github.com/aAlvarez03/StreetFighterProyect"
     }
 ]

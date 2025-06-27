@@ -45,7 +45,8 @@ export default function Proyects() {
               icon: tech.icon,
               key: index,
               title: tech.title
-            })) || []}            
+            })) || []}
+            repository={selectedProject?.repository || ""}         
             />
         </div>
     </section>
