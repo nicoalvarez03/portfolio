@@ -8,7 +8,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="mx-auto min-h-[85vh]">
+    <section id="inicio" className="mx-auto min-h-[80vh]">
       <div className="flex items-center justify-center">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-10">
@@ -80,7 +80,7 @@ export default function Hero() {
               </Reveal>
             </div>
           </div>
-          <div className="flex justify-center mt-30">
+          <div className="flex justify-center mt-25">
             <motion.a
               onClick={() => {
                 const section = document.getElementById("proyectos");
