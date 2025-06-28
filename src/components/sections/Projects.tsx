@@ -10,13 +10,13 @@ export default function Proyects() {
   const [selectedProject, setSelectedProject] = useState<null | typeof projectsData[0]>(null);
 
   return (
-    <section id="proyectos" className="w-full flex justify-center min-h-screen">
-        <div className="mb-10 w-full max-w-6xl">
+    <section id="proyectos" className="w-full flex justify-center mb-15">
+        <div className="mb-10 w-full max-w-[85%]">
           <Reveal>
               <h2 className="text-3xl font-bold mb-4">Proyectos</h2>
           </Reveal>
 
-          <div className="grid grid-cols-2 gap-x-5 gap-y-5">
+          <div className="grid grid-cols-3 gap-x-5 gap-y-5">
             {projectsData.map((project) => (
               <ProjectCard 
                 key={project.id}

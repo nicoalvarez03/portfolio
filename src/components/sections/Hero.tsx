@@ -8,8 +8,8 @@ import { MdOutlineFileDownload } from "react-icons/md";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="mx-auto min-h-[80vh]">
-      <div className="flex items-center justify-center">
+    <section id="inicio" className="w-full min-h-[80vh] flex justify-center mb-15">
+      <div className="flex items-center justify-center max-w-[85%]">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-10">
             <div className="flex justify-center">

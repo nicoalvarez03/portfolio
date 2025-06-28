@@ -17,7 +17,14 @@ const itemVariants = {
 export default function Navbar() {
 
     const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Contacto']; // defino los elementos del navbar
-    const sectionId = navItems.map(item => item.toLowerCase().replace(/\s+/g, '')); // transformo los elementos en ids válidos
+    const sectionId = navItems.map(item => 
+        item
+            .toLowerCase()
+            .replace(/ /g, '-') // reemplazo los espacios por guiones
+            .normalize('NFD') // normalizo los caracteres acentuados
+            .replace(/[\u0300-\u036f]/g, '') // elimino los caracteres acentuados
+            .replace(/\s+/g, '')
+        ); // transformo los elementos en ids válidos
 
     return(
         <header>
