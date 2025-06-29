@@ -1,4 +1,6 @@
 import {motion} from 'framer-motion';
+import BurgerComponent from '../common/BurgerComponent';
+import {useState, useEffect} from 'react';
 
 const navbarVariants = {
     hidden: {},
@@ -15,7 +17,6 @@ const itemVariants = {
 }
 
 export default function Navbar() {
-
     const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Tecnologias', 'Contacto']; // defino los elementos del navbar
     const sectionId = navItems.map(item => 
         item
@@ -26,16 +27,44 @@ export default function Navbar() {
             .replace(/\s+/g, '')
         ); // transformo los elementos en ids válidos
 
+    const [menuOpen, setMenuOpen] = useState(false); // estado para manejar el menú desplegable
+    const [isScrolled, setIsScrolled] = useState(false); // estado para manejar el scroll
+
+
+    const handleNavClick = (index: number) => {
+        const section = document.getElementById(sectionId[index]);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            setMenuOpen(false); // Cierra el menú al hacer clic en un elemento
+        }
+    }
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 10); // Cambia el estado si se ha hecho scroll
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll); // Limpia el evento al desmontar
+        };
+    })
+    
+
     return(
-        <header>
+        <header className={`w-full fixed top-0 left-0 transition-all duration-300 z-50 ${
+            isScrolled ? 'bg-black/40 backdrop-blur-lg shadow-lg' : 'bg-transparent'
+        }`}>
             <motion.nav
-                className="pt-10 pb-15 flex justify-center"
+                className="pt-6 pb-4 w-full"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
             >
+                <div className='w-full max-w-6xl mx-auto px-4'>
+
                 <motion.ul 
-                    className="flex justify-between items-center w-full max-w-6xl px-4"
+                    className="flex justify-between items-center w-full"
                     variants={navbarVariants}
                     initial="hidden"
                     animate="visible"
@@ -46,8 +75,9 @@ export default function Navbar() {
                     >
                         Nicolás Álvarez
                     </motion.li>
-                    <motion.ul className='flex gap-10'>
-
+                    
+                    {/* Menu de escritorio */}
+                    <motion.ul className='hidden md:flex gap-10'>
                     {navItems.map((item, index) => (
                         <motion.li
                         key={index}
@@ -64,7 +94,18 @@ export default function Navbar() {
                         </motion.li>
                     ))}
                     </motion.ul>
+
+                    {/* Menu de movil */}
+                    <div className='md:hidden'>
+                        <BurgerComponent 
+                            isOpen={menuOpen}
+                            onClick={() => setMenuOpen((prev) => !prev)}
+                            navItems={navItems}
+                            onNavClick={handleNavClick}
+                        />
+                    </div>
                 </motion.ul>
+                </div>
             </motion.nav>
         </header>
     );
