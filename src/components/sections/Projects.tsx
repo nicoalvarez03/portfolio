@@ -10,7 +10,7 @@ export default function Proyects() {
   const [selectedProject, setSelectedProject] = useState<null | typeof projectsData[0]>(null);
 
   return (
-    <section id="proyectos" className="w-full flex justify-center mb-15">
+    <section id="proyectos" className="w-full flex justify-center mb-30">
         <div className="mb-10 w-full max-w-[85%]">
           <Reveal>
               <h2 className="text-3xl font-bold mb-4">Proyectos</h2>
