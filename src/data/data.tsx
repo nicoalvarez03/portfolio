@@ -30,6 +30,11 @@ interface ProjectsDataProps {
     repository?: string; // URL del repositorio del proyecto
 }
 
+interface SkillsDataProps {
+    title: string;
+    svg: string;
+}
+
 export const projectsData: ProjectsDataProps[] = [
     {
         id: 1,
@@ -363,5 +368,124 @@ export const projectsData: ProjectsDataProps[] = [
             }
         ],
         repository: "https://github.com/aAlvarez03/StreetFighterProyect"
+    }
+]
+
+export const skillsData: SkillsDataProps[] = [
+    {
+        title: "React",
+        svg: "images/svg/react.svg"
+    },
+    {
+        title: "Node.js",
+        svg: "images/svg/nodeJs.svg"
+    },
+    {
+        title: "Express",
+        svg: "images/svg/express.svg"
+    },
+    {
+        title: "MongoDB",
+        svg: "images/svg/mongodb.svg"
+    },
+    {
+        title: "Tailwind CSS",
+        svg: "images/svg/tailwind.svg"
+    },
+    {
+        title: "JWT",
+        svg: "pendiente"
+    },
+    {
+        title: "Cloudinary",
+        svg: "images/svg/cloudinary.svg"
+    },
+    {
+        title: "HTML5",
+        svg: "images/svg/html.svg"
+    },
+    {
+        title: "JavaScript",
+        svg: "images/svg/javascript.svg"
+    },
+    {
+        title: "Laravel",
+        svg: "images/svg/laravel.svg"
+    },
+    {
+        title: "MySQL",
+        svg: "images/svg/mysql.svg"
+    },
+    {
+        title: "Bootstrap",
+        svg: "images/svg/bootstrap.svg"
+    },
+    {
+        title: "CSS3",
+        svg: "images/svg/css.svg"
+    },
+    {
+        title: "Angular",
+        svg: "images/svg/angular.svg"
+    },
+    {
+        title: "TypeScript",
+        svg: "images/svg/typescript.svg"
+    },
+    {
+        title: "PHP",
+        svg: "images/svg/php.svg"
+    },
+    {
+        title: "Git",
+        svg: "images/svg/git.svg"
+    },
+    {
+        title: "GitHub",
+        svg: "images/svg/github.svg"
+    },
+    {
+        title: "Framer Motion",
+        svg: "pendiente"
+    },
+    {
+        title: "Astro",
+        svg: "images/svg/astro.svg"
+    },
+    {
+        title: "Python",
+        svg: "images/svg/python.svg"
+    },
+    {
+        title: "Terminal",
+        svg: "images/svg/terminal.svg"
+    },
+    {
+        title: "Visual Studio Code",
+        svg: "images/svg/vsc.svg"
+    },
+    {
+        title: "Figma",
+        svg: "images/svg/figma.svg"
+    },
+    {
+        title: "Wordpress",
+        svg: "images/svg/wordpress.svg"
+    },
+    {
+        title: "Docker",
+        svg: "images/svg/docker.svg"
+    },
+    {
+        title: "Symfony",
+        svg: "images/svg/symfony.svg"
+    },
+    {
+        title: "Next.js",
+        svg: "images/svg/nextJs.svg"
+    },
+    {
+        title: ".NET",
+        svg: "images/svg/net.svg"
     }
 ]

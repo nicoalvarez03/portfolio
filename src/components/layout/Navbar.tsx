@@ -16,7 +16,7 @@ const itemVariants = {
 
 export default function Navbar() {
 
-    const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Contacto']; // defino los elementos del navbar
+    const navItems = ['Inicio', 'Proyectos', 'Sobre mí', 'Tecnologias', 'Contacto']; // defino los elementos del navbar
     const sectionId = navItems.map(item => 
         item
             .toLowerCase()

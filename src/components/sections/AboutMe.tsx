@@ -25,7 +25,7 @@ const paragraphs = [`Hola, soy Nicolás Álvarez, desarrollador web fullstack co
 
 export default function AboutMe() {
   return (
-    <section id="sobre-mi" className="min-h-screen w-full flex justify-center">
+    <section id="sobre-mi" className="w-full flex justify-center mb-30">
       <div className="w-full max-w-[85%]">
         <div className="flex flex-col items-center max-w-6xl mx-auto">
           <Reveal>
