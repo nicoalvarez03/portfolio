@@ -36,7 +36,7 @@ export default function Skills() {
   const learningSkills = ["Docker", "Symfony", "Next.js", ".NET"];
 
   return (
-    <section id="tecnologias" className="text-white">
+    <section id="tecnologias" className="text-white mb-30">
       <div className="container mx-auto px-4 flex flex-col items-center justify-center">
         <Reveal>
           <motion.h2
