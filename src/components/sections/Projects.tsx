@@ -11,12 +11,12 @@ export default function Proyects() {
 
   return (
     <section id="proyectos" className="w-full flex justify-center mb-30">
-        <div className="mb-10 w-full max-w-[85%]">
-          <Reveal>
+        <div className="mb-10 w-full max-w-6xl px-4">
+          <Reveal className="flex justify-center">
               <h2 className="text-3xl font-bold mb-4">Proyectos</h2>
           </Reveal>
 
-          <div className="grid grid-cols-3 gap-x-5 gap-y-5">
+          <div className="grid grid-cols-1 gap-x-5 gap-y-5 md:grid-cols-2 lg:grid-cols-3 place-items-center">
             {projectsData.map((project) => (
               <ProjectCard 
                 key={project.id}

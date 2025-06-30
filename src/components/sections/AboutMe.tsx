@@ -33,9 +33,8 @@ export default function AboutMe() {
           </Reveal>
             <AnimatePresence>
               {paragraphs.map((paragraph, pIndex) => (
-                <Reveal>
+                <Reveal key={pIndex}>
                 <motion.p
-                  key={pIndex}
                   variants={containerVariants}
                   custom={pIndex}
                   initial="hidden"

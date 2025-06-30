@@ -5,12 +5,14 @@ interface ButtonPrimaryProps {
   children: string | JSX.Element;
   onClick?: () => void;
   className?: string;
+  type?: "button" | "submit" | "reset";
 }
 
 export const ButtonPrimary = ({
   children,
   onClick,
   className = "",
+  type,
 }: ButtonPrimaryProps) => {
   return (
     <motion.button
@@ -19,6 +21,7 @@ export const ButtonPrimary = ({
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300 }}
+      type={type}
     >
       {children}
     </motion.button>
