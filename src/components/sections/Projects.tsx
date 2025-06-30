@@ -11,7 +11,7 @@ export default function Proyects() {
 
   return (
     <section id="proyectos" className="w-full flex justify-center mb-30">
-        <div className="mb-10 w-full max-w-6xl px-4">
+        <div className="w-full max-w-6xl px-4">
           <Reveal className="flex justify-center">
               <h2 className="text-3xl font-bold mb-4">Proyectos</h2>
           </Reveal>

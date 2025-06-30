@@ -17,11 +17,11 @@ const word = {
     visible: {
         opacity: 1,
         y: 0,
-        transition: { duration: 0.4 }
+        transition: { duration: 0.2 }
     }
 }
 
-const paragraphs = [`Hola, soy Nicolás Álvarez, desarrollador web fullstack con una gran pasión por la tecnología y la creación de soluciones digitales. Mi camino en la programación comenzó hace más de cinco años, motivado por la curiosidad y el entusiasmo por los videojuegos, lo que me llevó a aprender C# y a introducirme en el desarrollo orientado a objetos y la lógica de programación desde una perspectiva creativa.`, `Con el tiempo, descubrí en el desarrollo web un espacio donde podía combinar la creatividad con la funcionalidad para construir productos reales que impactan directamente en las personas. Actualmente, me especializo en tecnologías modernas como JavaScript, TypeScript, React, Node.js, Express y bases de datos como MongoDB. También tengo experiencia en el uso de herramientas como TailwindCSS, Cloudinary y la implementación de autenticación con JWT.`, `Soy una persona proactiva, curiosa y con una fuerte motivación por seguir aprendiendo. Me esfuerzo constantemente por mejorar mis habilidades técnicas y mantenerme al día con las mejores prácticas de la industria. Disfruto trabajar en equipo, colaborar en entornos ágiles y enfrentar nuevos desafíos que me permitan crecer tanto profesional como personalmente.`, `Estoy buscando una oportunidad en la que pueda aportar valor desde el primer día, seguir aprendiendo junto a otros profesionales y contribuir al desarrollo de productos innovadores que marquen la diferencia.`]
+const paragraphs = [`Hola, soy Nicolás Álvarez, desarrollador web fullstack con más de un año de experiencia y una gran pasión por la tecnología. Comencé en la programación gracias a los videojuegos, lo que me llevó a aprender C# y lógica desde una perspectiva creativa.`, `Actualmente, me especializo en el desarrollo de aplicaciones web modernas usando tecnologías como React, Node.js, php, TypeScript, MongoDB y herramientas como TailwindCSS, Cloudinary y JWT, entre otras. Disfruto combinar diseño y funcionalidad para crear soluciones digitales con impacto real.`, `Soy una persona proactiva, curiosa y comprometida con la mejora continua. Busco formar parte de una empresa con proyectos que me desafíen, me permitan seguir aprendiendo y aportar valor desde el primer día.`]
 
 export default function AboutMe() {
   return (

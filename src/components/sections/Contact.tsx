@@ -19,7 +19,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contacto" className="text-white w-full px-4 mb-10">
+    <section id="contacto" className="text-white w-full px-4 mb-30">
       <div className="w-full flex flex-col items-center justify-center">
         <Reveal>
           <h2 className="text-3xl font-bold text-center mb-8">Contáctame</h2>

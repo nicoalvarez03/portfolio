@@ -14,7 +14,7 @@ export default function Skills() {
     "TypeScript",
     "HTML5",
     "CSS3",
-    "Figma",
+    "Figma"
   ];
   const backendSkills = [
     "Node.js",
@@ -25,7 +25,8 @@ export default function Skills() {
     "PHP",
     "Python",
     "Cloudinary",
-    "Java"
+    "Java",
+    "JWT"
   ];
   const toolsSkills = [
     "Git",
