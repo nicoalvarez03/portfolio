@@ -487,5 +487,9 @@ export const skillsData: SkillsDataProps[] = [
     {
         title: ".NET",
         svg: "images/svg/net.svg"
+    },
+    {
+        title: "Java",
+        svg: "images/svg/java.svg"
     }
 ]

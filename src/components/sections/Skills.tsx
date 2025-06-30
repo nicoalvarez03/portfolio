@@ -25,6 +25,7 @@ export default function Skills() {
     "PHP",
     "Python",
     "Cloudinary",
+    "Java"
   ];
   const toolsSkills = [
     "Git",
@@ -82,19 +83,9 @@ export default function Skills() {
                   {/* Contenedor para las líneas */}
                   <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
                     <motion.span
-                      className="absolute top-0 left-0 h-[1px] w-1/4 bg-white/50 rounded"
+                      className="absolute top-0 left-0 h-[1px] w-full bg-[#9191ee] rounded"
                       initial={{ x: "-100%" }}
                       animate={{ x: "100%" }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                    />
-                    <motion.span
-                      className="absolute top-0 right-0 w-[1px] h-1/4 bg-white/50 rounded"
-                      initial={{ y: "-100%" }}
-                      animate={{ y: "100%" }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
@@ -103,9 +94,9 @@ export default function Skills() {
                       }}
                     />
                     <motion.span
-                      className="absolute bottom-0 right-0 h-[1px] w-1/4 bg-white/50 rounded"
-                      initial={{ x: "100%" }}
-                      animate={{ x: "-100%" }}
+                      className="absolute top-0 right-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "-100%" }}
+                      animate={{ y: "100%" }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
@@ -114,14 +105,25 @@ export default function Skills() {
                       }}
                     />
                     <motion.span
-                      className="absolute bottom-0 left-0 w-[1px] h-1/4 bg-white/50 rounded"
+                      className="absolute bottom-0 right-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "100%" }}
+                      animate={{ x: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 left-0 w-[1px] h-full bg-[#9191ee] rounded"
                       initial={{ y: "100%" }}
                       animate={{ y: "-100%" }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
                         ease: "linear",
-                        delay: 1.5,
+                        delay: 2,
                       }}
                     />
                   </div>
@@ -134,18 +136,70 @@ export default function Skills() {
               transition={{ type: "tween", stiffness: 300, damping: 20 }}
             >
               <Reveal>
-                <div className="bg-gradient-to-tr from-gray-800 to-gray-900 border border-gray-700 p-6 rounded-lg w-full min-h-[628px] max-w-xl flex flex-col items-center">
-                  <h3 className="text-3xl font-semibold mb-6">Backend</h3>
-                  <div className="flex flex-wrap gap-10 justify-center">
-                    {skillsData
-                      .filter((skill) => backendSkills.includes(skill.title))
-                      .map((skill, index) => (
-                        <SkillComponent
-                          key={index}
-                          title={skill.title}
-                          svg={skill.svg}
-                        />
-                      ))}
+                <div className="relative rounded-xl overflow-hidden">
+                  {/* Contenido tarjeta */}
+                  <div className="relative z-10 bg-gradient-to-tl from-gray-800 to-gray-900 p-6 w-full min-h-[628px] max-w-xl flex flex-col items-center">
+                    <h3 className="text-3xl font-semibold mb-6">Backend</h3>
+                    <div className="flex flex-wrap gap-10 justify-center">
+                      {skillsData
+                        .filter((skill) => backendSkills.includes(skill.title))
+                        .map((skill, index) => (
+                          <SkillComponent
+                            key={index}
+                            title={skill.title}
+                            svg={skill.svg}
+                          />
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Animación de borde */}
+                  {/* Contenedor para las líneas */}
+                  <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
+                    <motion.span
+                      className="absolute top-0 left-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute top-0 right-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "-100%" }}
+                      animate={{ y: "100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 right-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "100%" }}
+                      animate={{ x: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 left-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "100%" }}
+                      animate={{ y: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 2,
+                      }}
+                    />
                   </div>
                 </div>
               </Reveal>
@@ -156,18 +210,70 @@ export default function Skills() {
               transition={{ type: "tween", stiffness: 300, damping: 20 }}
             >
               <Reveal>
-                <div className="bg-gradient-to-bl from-gray-800 to-gray-900 border border-gray-700 p-6 rounded-lg w-full min-h-[628px] max-w-xl flex flex-col items-center">
-                  <h3 className="text-3xl font-semibold mb-6">Herramientas</h3>
-                  <div className="flex flex-wrap gap-10 justify-center">
-                    {skillsData
-                      .filter((skill) => toolsSkills.includes(skill.title))
-                      .map((skill, index) => (
-                        <SkillComponent
-                          key={index}
-                          title={skill.title}
-                          svg={skill.svg}
-                        />
-                      ))}
+                <div className="relative rounded-xl overflow-hidden">
+                  {/* Contenido tarjeta */}
+                  <div className="relative z-10 bg-gradient-to-tl from-gray-800 to-gray-900 p-6 w-full min-h-[628px] max-w-xl flex flex-col items-center">
+                    <h3 className="text-3xl font-semibold mb-6">Herramientas</h3>
+                    <div className="flex flex-wrap gap-10 justify-center">
+                      {skillsData
+                        .filter((skill) => toolsSkills.includes(skill.title))
+                        .map((skill, index) => (
+                          <SkillComponent
+                            key={index}
+                            title={skill.title}
+                            svg={skill.svg}
+                          />
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Animación de borde */}
+                  {/* Contenedor para las líneas */}
+                  <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
+                    <motion.span
+                      className="absolute top-0 left-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute top-0 right-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "-100%" }}
+                      animate={{ y: "100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 right-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "100%" }}
+                      animate={{ x: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 left-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "100%" }}
+                      animate={{ y: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 2,
+                      }}
+                    />
                   </div>
                 </div>
               </Reveal>
@@ -178,18 +284,70 @@ export default function Skills() {
               transition={{ type: "tween", stiffness: 300, damping: 20 }}
             >
               <Reveal>
-                <div className="bg-gradient-to-br from-gray-800 to-gray-900 border border-gray-700 p-6 rounded-lg w-full min-h-[628px] max-w-xl flex flex-col items-center">
-                  <h3 className="text-3xl font-semibold mb-6">Aprendiendo</h3>
-                  <div className="flex flex-wrap gap-10 justify-center">
-                    {skillsData
-                      .filter((skill) => learningSkills.includes(skill.title))
-                      .map((skill, index) => (
-                        <SkillComponent
-                          key={index}
-                          title={skill.title}
-                          svg={skill.svg}
-                        />
-                      ))}
+                <div className="relative rounded-xl overflow-hidden">
+                  {/* Contenido tarjeta */}
+                  <div className="relative z-10 bg-gradient-to-tl from-gray-800 to-gray-900 p-6 w-full min-h-[628px] max-w-xl flex flex-col items-center">
+                    <h3 className="text-3xl font-semibold mb-6">Aprendiendo</h3>
+                    <div className="flex flex-wrap gap-10 justify-center">
+                      {skillsData
+                        .filter((skill) => learningSkills.includes(skill.title))
+                        .map((skill, index) => (
+                          <SkillComponent
+                            key={index}
+                            title={skill.title}
+                            svg={skill.svg}
+                          />
+                        ))}
+                    </div>
+                  </div>
+
+                  {/* Animación de borde */}
+                  {/* Contenedor para las líneas */}
+                  <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-20">
+                    <motion.span
+                      className="absolute top-0 left-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "-100%" }}
+                      animate={{ x: "100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 0.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute top-0 right-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "-100%" }}
+                      animate={{ y: "100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 right-0 h-[1px] w-full bg-[#9191ee] rounded"
+                      initial={{ x: "100%" }}
+                      animate={{ x: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 1.5,
+                      }}
+                    />
+                    <motion.span
+                      className="absolute bottom-0 left-0 w-[1px] h-full bg-[#9191ee] rounded"
+                      initial={{ y: "100%" }}
+                      animate={{ y: "-100%" }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "linear",
+                        delay: 2,
+                      }}
+                    />
                   </div>
                 </div>
               </Reveal>

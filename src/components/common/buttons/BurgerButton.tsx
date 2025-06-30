@@ -22,6 +22,7 @@ export default function BurgerButton({ isOpen }: Props) {
       <motion.path
         {...commonProps}
         d="M4 6L20 6"
+        initial={{ opacity: 1 }}
         animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
         whileTap={{ scale: 0.9 }} // 🔥 animación de rebote al tocar
         transition={{ type: "spring", stiffness: 300, damping: 15 }}
@@ -29,12 +30,14 @@ export default function BurgerButton({ isOpen }: Props) {
       <motion.path
         {...commonProps}
         d="M4 12L20 12"
+        initial={{ opacity: 1 }}
         animate={isOpen ? { opacity: 0 } : { opacity: 1 }}
         transition={{ duration: 0.3 }}
       />
       <motion.path
         {...commonProps}
         d="M4 18L20 18"
+        initial={{ opacity: 1 }}
         animate={isOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
         transition={{ duration: 0.3 }}
       />
