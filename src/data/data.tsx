@@ -43,67 +43,67 @@ export const projectsData: ProjectsDataProps[] = [
         description: "Una plataforma de reservas de alojamientos similar a Airbnb, donde los usuarios pueden registrarse e iniciar sesion. Crear, modificar o eliminar alojamientos, también crear o eliminar reservas. Se hizo uso de JWT para la autenticación y autorización de usuarios. Los alojamientos se almacenan en una base de datos MongoDB y las imágenes se suben a Cloudinary para su almacenamiento y gestión. También se implemento componentes externos como react-toast, keen-slider, MUI-datepicker, entre otros. El proyecto fue desarrollado con React y Tailwind CSS en el frontend, y Node.js, Express y MongoDB en el backend.",
         images: [
             {
-                src: "images/AirNoBnb/index.png",
+                src: "images/AirNoBnb/index.webp",
                 alt: "AirNoBnb - Imagen principal"
             },
             {
-                src: "images/AirNoBnb/login.png",
+                src: "images/AirNoBnb/login.webp",
                 alt: "AirNoBnb - Login"
             },
             {
-                src: "images/AirNoBnb/registro.png",
+                src: "images/AirNoBnb/registro.webp",
                 alt: "AirNoBnb - Registro"
             },
             {
-                src: "images/AirNoBnb/perfil.png",
+                src: "images/AirNoBnb/perfil.webp",
                 alt: "AirNoBnb - Perfil"
             },
             {
-                src: "images/AirNoBnb/misReservas.png",
+                src: "images/AirNoBnb/misReservas.webp",
                 alt: "AirNoBnb - Mis Reservas"
             },
             {
-                src: "images/AirNoBnb/misAlojamientos.png",
+                src: "images/AirNoBnb/misAlojamientos.webp",
                 alt: "AirNoBnb - Mis Alojamientos"
             },
             {
-                src: "images/AirNoBnb/nuevo1.png",
+                src: "images/AirNoBnb/nuevo1.webp",
                 alt: "AirNoBnb - Nuevo Alojamiento"
             },
             {
-                src: "images/AirNoBnb/nuevo2.png",
+                src: "images/AirNoBnb/nuevo2.webp",
                 alt: "AirNoBnb - Nuevo Alojamiento 2"
             },
             {
-                src: "images/AirNoBnb/edit1.png",
+                src: "images/AirNoBnb/edit1.webp",
                 alt: "AirNoBnb - Editar Alojamiento"
             },
             {
-                src: "images/AirNoBnb/edit2.png",
+                src: "images/AirNoBnb/edit2.webp",
                 alt: "AirNoBnb - Editar Alojamiento 2"
             },
             {
-                src: "images/AirNoBnb/eliminarAlojamiento.png",
+                src: "images/AirNoBnb/eliminarAlojamiento.webp",
                 alt: "AirNoBnb - Eliminar Alojamiento"
             },
             {
-                src: "images/AirNoBnb/detalle1.png",
+                src: "images/AirNoBnb/detalle1.webp",
                 alt: "AirNoBnb - Detalle Alojamiento 1"
             },
             {
-                src: "images/AirNoBnb/detalle2.png",
+                src: "images/AirNoBnb/detalle2.webp",
                 alt: "AirNoBnb - Detalle Alojamiento 2"
             },
             {
-                src: "images/AirNoBnb/detalle3.png",
+                src: "images/AirNoBnb/detalle3.webp",
                 alt: "AirNoBnb - Detalle Alojamiento 3"
             },
             {
-                src: "images/AirNoBnb/reservar.png",
+                src: "images/AirNoBnb/reservar.webp",
                 alt: "AirNoBnb - Reservar Alojamiento"
             },
             {
-                src: "images/AirNoBnb/visualizarReserva1.png",
+                src: "images/AirNoBnb/visualizarReserva1.webp",
                 alt: "AirNoBnb - Visualizar Reserva"
             }
 
@@ -146,31 +146,31 @@ export const projectsData: ProjectsDataProps[] = [
         description: "Una aplicación hecha con HTML y tailwind CSS que muestra una cartelera de películas. Permite ver detalles de cada película, incluyendo su título, sinopsis, duración y género. También permite ver las salas disponibles y las funciones de cada película. Contiene un formulario de login y registro.",
         images: [
             {
-                src: "images/CarteleraCine/index.png",
+                src: "images/CarteleraCine/index.webp",
                 alt: "Cartelera Cine - Imagen principal"
             },
             {
-                src: "images/CarteleraCine/index2.png",
+                src: "images/CarteleraCine/index2.webp",
                 alt: "Cartelera Cine - Imagen principal 2"
             },
             {
-                src: "images/CarteleraCine/login.png",
+                src: "images/CarteleraCine/login.webp",
                 alt: "Cartelera Cine - Login"
             },
             {
-                src: "images/CarteleraCine/registro.png",
+                src: "images/CarteleraCine/registro.webp",
                 alt: "Cartelera Cine - Registro"
             },
             {
-                src: "images/CarteleraCine/perfil.png",
+                src: "images/CarteleraCine/perfil.webp",
                 alt: "Cartelera Cine - Perfil"
             },
             {
-                src: "images/CarteleraCine/detallePelicula.png",
+                src: "images/CarteleraCine/detallePelicula.webp",
                 alt: "Cartelera Cine - Detalle de Película"
             },
             {
-                src: "images/CarteleraCine/salas.png",
+                src: "images/CarteleraCine/salas.webp",
                 alt: "Cartelera Cine - Salas"
             }
         ],
@@ -196,35 +196,35 @@ export const projectsData: ProjectsDataProps[] = [
         description: "Una aplicación web de comercio electrónico que permite a los usuarios encontrar los mejores chollos. También permite registrarse, iniciar sesión, navegar por productos, crear, editar o eliminar nuevos productos. Los administradores pueden gestionar productos y usuarios.",
         images: [
             {
-                src: "images/Chollosevero/index.png",
+                src: "images/Chollosevero/index.webp",
                 alt: "Chollosevero - Imagen principal"
             },
             {
-                src: "images/Chollosevero/login.png",
+                src: "images/Chollosevero/login.webp",
                 alt: "Chollosevero - Login"
             },
             {
-                src: "images/Chollosevero/registro.png",
+                src: "images/Chollosevero/registro.webp",
                 alt: "Chollosevero - Registro"
             },
             {
-                src: "images/Chollosevero/creacionChollo.png",
+                src: "images/Chollosevero/creacionChollo.webp",
                 alt: "Chollosevero - Creación de Chollo"
             },
             {
-                src: "images/Chollosevero/editarChollo.png",
+                src: "images/Chollosevero/editarChollo.webp",
                 alt: "Chollosevero - Edición de Chollo"
             },
             {
-                src: "images/Chollosevero/misChollos.png",
+                src: "images/Chollosevero/misChollos.webp",
                 alt: "Chollosevero - Mis Chollos"
             },
             {
-                src: "images/Chollosevero/visualizarChollo.png",
+                src: "images/Chollosevero/visualizarChollo.webp",
                 alt: "Chollosevero - Visualizar Chollo"
             },
             {
-                src: "images/Chollosevero/gestionUsuarios.png",
+                src: "images/Chollosevero/gestionUsuarios.webp",
                 alt: "Chollosevero - Gestión de Usuarios"
             },
         ],
@@ -250,27 +250,27 @@ export const projectsData: ProjectsDataProps[] = [
         description: "Una aplicación web que simula un clon de la conocida plataforma Mercado Libre. Hecha unicamente con HTML y CSS para mostrar productos, categorías (la cual permite navegar entre estas) y carrito de compras. También dispone de un formulario de login y registro.",
         images: [
             {
-                src: "images/MercadoLibre/index.png",
+                src: "images/MercadoLibre/index.webp",
                 alt: "Mercado Libre - Imagen principal"
             },
             {
-                src: "images/MercadoLibre/login.png",
+                src: "images/MercadoLibre/login.webp",
                 alt: "Mercado Libre - Login"
             },
             {
-                src: "images/MercadoLibre/registro.png",
+                src: "images/MercadoLibre/registro.webp",
                 alt: "Mercado Libre - Registro"
             },
             {
-                src: "images/MercadoLibre/categorias.png",
+                src: "images/MercadoLibre/categorias.webp",
                 alt: "Mercado Libre - Categorías"
             },
             {
-                src: "images/MercadoLibre/electrodomesticos.png",
+                src: "images/MercadoLibre/electrodomesticos.webp",
                 alt: "Mercado Libre - Electrodomésticos"
             },
             {
-                src: "images/MercadoLibre/carrito.png",
+                src: "images/MercadoLibre/carrito.webp",
                 alt: "Mercado Libre - Carrito de Compras"
             },
         ],
@@ -296,19 +296,19 @@ export const projectsData: ProjectsDataProps[] = [
         description: "Aplicación web de comercio electrónico que permite a los usuarios navegar por los productos existentes ya sea a través de los destacados o las categorías disponibles. Pueden añadir productos al carrito.",
         images: [
             {
-                src: "images/MiniMarket/index.jpg",
+                src: "images/MiniMarket/index.webp",
                 alt: "MiniMarket - Imagen principal"
             },
             {
-                src: "images/MiniMarket/index2.jpg",
+                src: "images/MiniMarket/index2.webp",
                 alt: "MiniMarket - Imagen principal 2"
             },
             {
-                src: "images/MiniMarket/categorias.jpg",
+                src: "images/MiniMarket/categorias.webp",
                 alt: "MiniMarket - Categorías"
             },
             {
-                src: "images/MiniMarket/carrito.jpg",
+                src: "images/MiniMarket/carrito.webp",
                 alt: "MiniMarket - Carrito de Compras"
             },
         ],
@@ -338,19 +338,19 @@ export const projectsData: ProjectsDataProps[] = [
         description: "Aplicación web que simula una interfaz del conocido juego Street Fighter. Permite ver los personajes disponibles, los atributos que tiene cada personaje. También permite modificar la imagen de cada luchador.",
         images: [
             {
-                src: "images/StreetFighter/index.png",
+                src: "images/StreetFighter/index.webp",
                 alt: "Street Fighter - Imagen principal"
             },
             {
-                src: "images/StreetFighter/seleccion.png",
+                src: "images/StreetFighter/seleccion.webp",
                 alt: "Street Fighter - Selección de Luchadores"
             },
             {
-                src: "images/StreetFighter/modificar.png",
+                src: "images/StreetFighter/modificar.webp",
                 alt: "Street Fighter - Modificar Luchador"
             },
             {
-                src: "images/StreetFighter/ready.png",
+                src: "images/StreetFighter/ready.webp",
                 alt: "Street Fighter - Ready"
             }
         ],
