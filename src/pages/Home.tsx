@@ -1,13 +1,18 @@
 import Layout from "../components/layout/Layout";
+import AboutMe from "../components/sections/AboutMe";
+import Contact from "../components/sections/Contact";
 import Hero from "../components/sections/Hero";
+import Projects from "../components/sections/Projects";
+import Skills from "../components/sections/Skills";
 
 export default function Home() {
-    return(
-        <div>
-            <Layout>
-                <Hero />
-                {/* Aquí puedes agregar más secciones */}
-            </Layout>
-        </div>
-    );
+  return (
+    <Layout>
+      <Hero />
+      <Projects />
+      <AboutMe />
+      <Skills />
+      <Contact />
+    </Layout>
+  );
 }

@@ -4,9 +4,10 @@ import {motion, useInView, useAnimation} from "framer-motion";
 interface Props {
     children: JSX.Element;
     width?: "fit-content" | "100%";
+    className?: string;
 }
 
-export const Reveal = ({children, width = "fit-content"} : Props) => {
+export const Reveal = ({children, width = "fit-content", className = ""} : Props) => {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
@@ -23,7 +24,7 @@ export const Reveal = ({children, width = "fit-content"} : Props) => {
 
 
     return (
-        <div>
+        <div className={className}>
             <div ref={ref} style={{ position: "relative", width, overflow: "hidden" }}>
                 <motion.div 
                     variants={{
