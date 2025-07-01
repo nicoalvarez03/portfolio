@@ -71,17 +71,17 @@ export default function Hero() {
               </Reveal>
 
               <Reveal>
-                <ButtonSecondary className="w-50 h-10 m-5 gap-2">
+                <ButtonSecondary className="w-50 h-10 m-5">
                   <a
                     href={pdfEs}
                     target="_blank"
                     rel="noopener noreferrer"
                     download="Currículum_Nicolas_Alvarez_Espanol.pdf"
-                    className="text-[12px]"
+                    className="text-[0.8em] w-full h-full flex items-center justify-center gap-5"
                   >
                     Descargar CV Español
+                    <MdOutlineFileDownload className=""/>
                   </a>
-                  <MdOutlineFileDownload />
                 </ButtonSecondary>
               </Reveal>
             </div>
@@ -97,8 +97,9 @@ export default function Hero() {
                   target="_blank"
                   className="text-white hover:text-[#0077b5] transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-                transition={{ duration: 0.2, ease: "easeInOut" }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                  aria-label="Perfil de LinkedIn"
                 >
                   <FaLinkedin className="w-[50px] h-[50px]" />
                 </motion.a>
@@ -115,6 +116,7 @@ export default function Hero() {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}
+                  aria-label="Perfil de Github"
                 >
                   <FaGithub className="w-[50px] h-[50px]" />
                 </motion.a>
@@ -123,16 +125,17 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex justify-center mt-10 mb-20 md:mb-0 md:mt-20">
-            <motion.a
+            <motion.button
               onClick={() => {
                 const section = document.getElementById("proyectos");
                 if (section) {
                   section.scrollIntoView({ behavior: "smooth" });
                 }
               }}
+              aria-label="Scroll hacia proyectos"
             >
               <ArrowDown />
-            </motion.a>
+            </motion.button>
           </div>
         </div>
       </div>

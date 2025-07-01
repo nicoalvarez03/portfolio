@@ -48,8 +48,8 @@ export default function Navbar() {
     }
   };
 
-  const DURATION = 0.25 // Duración de la animación de las letras
-  const STAGGER = 0.025 // Retraso entre cada letra en la animación
+  const DURATION = 0.25; // Duración de la animación de las letras
+  const STAGGER = 0.025; // Retraso entre cada letra en la animación
 
   // Componente para animar las letras de los enlaces del navbar
   const FlapLink = ({ children }: { children: string }) => {
@@ -59,43 +59,49 @@ export default function Navbar() {
         initial="initial"
         whileHover="hovered"
         transition={{
-          staggerChildren: 0.2
+          staggerChildren: 0.2,
         }}
       >
         <div>
           {children.split("").map((l, i) => {
-            return <motion.span key={i}
-              className="inline-block"
-              variants={{
-                initial: { y: 0 },
-                hovered: { y: "-100%" },
-              }}
-              transition={{
-                duration: DURATION,
-                ease: "easeInOut",
-                delay: i * STAGGER, // Retraso para cada letra
-              }}
-            >
-              {l}
-            </motion.span>;
+            return (
+              <motion.span
+                key={i}
+                className="inline-block"
+                variants={{
+                  initial: { y: 0 },
+                  hovered: { y: "-100%" },
+                }}
+                transition={{
+                  duration: DURATION,
+                  ease: "easeInOut",
+                  delay: i * STAGGER, // Retraso para cada letra
+                }}
+              >
+                {l}
+              </motion.span>
+            );
           })}
         </div>
         <div className="absolute inset-0">
           {children.split("").map((l, i) => {
-            return <motion.span key={i}
-            className="inline-block"
-            variants={{
-              initial: { y: "100%" },
-              hovered: { y: 0 },
-            }}
-            transition={{
-              duration: DURATION,
-              ease: "easeInOut",
-              delay: i * STAGGER, // Retraso para cada letra
-            }}
-            >
-              {l}
-            </motion.span>;
+            return (
+              <motion.span
+                key={i}
+                className="inline-block"
+                variants={{
+                  initial: { y: "100%" },
+                  hovered: { y: 0 },
+                }}
+                transition={{
+                  duration: DURATION,
+                  ease: "easeInOut",
+                  delay: i * STAGGER, // Retraso para cada letra
+                }}
+              >
+                {l}
+              </motion.span>
+            );
           })}
         </div>
       </motion.div>
@@ -120,14 +126,18 @@ export default function Navbar() {
   return (
     <div className="relative">
       {/* Menu de movil */}
-      <div className="lg:hidden fixed top-5 right-5 z-60">
+      <motion.div className="lg:hidden fixed top-5 right-5 z-60"
+        initial={{ opacity: 0, y: -50}}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
         <BurgerComponent
           isOpen={menuOpen}
           onClick={() => setMenuOpen((prev) => !prev)}
           navItems={navItems}
           onNavClick={handleNavClick}
         />
-      </div>
+      </motion.div>
       <header
         className={`w-full fixed top-0 left-0 transition-all duration-300 ${
           isScrolled
@@ -152,7 +162,9 @@ export default function Navbar() {
                 className="text-white text-lg font-semibold"
                 variants={itemVariants}
               >
-                Nicolás Álvarez
+                <a href="/">
+                  <img src="favicon.svg" alt="Logo" width={40} height={40} />
+                </a>
               </motion.li>
 
               {/* Menu de escritorio */}

@@ -17,7 +17,7 @@ export const ButtonSecondary = ({
   return (
     <motion.button
       onClick={onClick}
-      className={`text-white px-4 py-2 rounded-xl border-1 flex items-center justify-center cursor-pointer ${className}`}
+      className={`text-white rounded-xl border-1 flex items-center justify-center cursor-pointer ${className}`}
       whileHover={{ scale: 1.05, backgroundColor: "#46466e", boxShadow: "0 0 10px 3px rgba(255, 255, 255, 0.4)" }}
       whileTap={{ scale: 0.95 }}
       transition={{ type: "spring", stiffness: 300 }}
