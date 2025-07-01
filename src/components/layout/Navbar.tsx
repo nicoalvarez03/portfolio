@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import BurgerComponent from "../common/BurgerComponent";
 import { useState, useEffect } from "react";
 
+// Variantes para animar el navbar completo
 const navbarVariants = {
   hidden: {},
   visible: {
@@ -11,6 +12,7 @@ const navbarVariants = {
   },
 };
 
+// variantes para animar los elementos del navbar
 const itemVariants = {
   hidden: { opacity: 0, y: -10 },
   visible: { opacity: 1, y: 0 },
@@ -24,6 +26,7 @@ export default function Navbar() {
     "Tecnologias",
     "Contacto",
   ]; // defino los elementos del navbar
+
   const sectionId = navItems.map((item) =>
     item
       .toLowerCase()
@@ -36,12 +39,67 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // estado para manejar el menú desplegable
   const [isScrolled, setIsScrolled] = useState(false); // estado para manejar el scroll
 
+  // Función para manejar el clic en los elementos del menú
   const handleNavClick = (index: number) => {
     const section = document.getElementById(sectionId[index]);
     if (section) {
       section.scrollIntoView({ behavior: "smooth" });
       setMenuOpen(false); // Cierra el menú al hacer clic en un elemento
     }
+  };
+
+  const DURATION = 0.25 // Duración de la animación de las letras
+  const STAGGER = 0.025 // Retraso entre cada letra en la animación
+
+  // Componente para animar las letras de los enlaces del navbar
+  const FlapLink = ({ children }: { children: string }) => {
+    return (
+      <motion.div
+        className="relative block overflow-hidden whitespace-nowrap text-lg"
+        initial="initial"
+        whileHover="hovered"
+        transition={{
+          staggerChildren: 0.2
+        }}
+      >
+        <div>
+          {children.split("").map((l, i) => {
+            return <motion.span key={i}
+              className="inline-block"
+              variants={{
+                initial: { y: 0 },
+                hovered: { y: "-100%" },
+              }}
+              transition={{
+                duration: DURATION,
+                ease: "easeInOut",
+                delay: i * STAGGER, // Retraso para cada letra
+              }}
+            >
+              {l}
+            </motion.span>;
+          })}
+        </div>
+        <div className="absolute inset-0">
+          {children.split("").map((l, i) => {
+            return <motion.span key={i}
+            className="inline-block"
+            variants={{
+              initial: { y: "100%" },
+              hovered: { y: 0 },
+            }}
+            transition={{
+              duration: DURATION,
+              ease: "easeInOut",
+              delay: i * STAGGER, // Retraso para cada letra
+            }}
+            >
+              {l}
+            </motion.span>;
+          })}
+        </div>
+      </motion.div>
+    );
   };
 
   useEffect(() => {
@@ -61,7 +119,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-        {/* Menu de movil */}
+      {/* Menu de movil */}
       <div className="lg:hidden fixed top-5 right-5 z-60">
         <BurgerComponent
           isOpen={menuOpen}
@@ -111,7 +169,7 @@ export default function Navbar() {
                       }
                     }}
                   >
-                    {item}
+                    <FlapLink>{item}</FlapLink>
                   </motion.li>
                 ))}
               </motion.ul>
@@ -119,7 +177,6 @@ export default function Navbar() {
           </div>
         </motion.nav>
       </header>
-      
     </div>
   );
 }

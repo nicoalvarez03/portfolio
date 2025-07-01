@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section
       id="inicio"
-      className="w-full min-h-[90vh] flex justify-center items-center px-4 my-10 md:my-20"
+      className="w-full min-h-[90vh] flex justify-center items-center px-4 my-10 md:mt-25"
     >
       <div className="w-full max-w-6xl mx-auto flex flex-col mt-15 md:mt-0 md:flex-row items-center justify-center gap-10">
         <div className="flex flex-col gap-2">
@@ -48,11 +48,7 @@ export default function Hero() {
             <Reveal>
               <div className="text-sm sm:text-base max-w-xl px-10 text-center md:max-w-3xl mx-auto md:mx-0">
                 <p>
-                  Gran motivación para seguir perfeccionando habilidades y
-                  crecer profesionalmente. Confío plenamente en mis capacidades
-                  como profesional. Através de mi experiencia en diferentes
-                  organizaciones he desarrollado amplías habilidades analíticas,
-                  de comunicación y excelente capacidad para trabajar en equipo.
+                  Apasionado por el desarrollo web, la creatividad y los retos técnicos. Construyo productos digitales con impacto real.
                 </p>
               </div>
             </Reveal>
@@ -99,7 +95,7 @@ export default function Hero() {
                 <motion.a
                   href="https://www.linkedin.com/in/nicolas-alvarez-823489121/"
                   target="_blank"
-                  className="text-white hover:text-gray-400 transition-colors duration-300"
+                  className="text-white hover:text-[#0077b5] transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ duration: 0.2, ease: "easeInOut" }}
@@ -115,7 +111,7 @@ export default function Hero() {
                 <motion.a
                   href="https://github.com/nicoalvarez03?tab=repositories"
                   target="_blank"
-                  className="text-white hover:text-gray-400 transition-colors duration-300"
+                  className="text-white hover:text-[#333] transition-colors duration-300"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.2, ease: "easeInOut" }}

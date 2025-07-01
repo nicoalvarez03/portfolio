@@ -1,5 +1,3 @@
-
-
 interface Props {
     title: string;
     svg: string;

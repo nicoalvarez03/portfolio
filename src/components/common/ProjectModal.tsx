@@ -77,7 +77,7 @@ export default function ProjectModal({
           >
             <motion.button
               onClick={onClose}
-              className="absolute top-2 right-2 md:top-8 md:right-10 text-2xl cursor-pointer text-white hover:text-gray-400 transition-colors duration-200 flex items-center justify-center rounded-full p-2 hover:bg-gray-700/50 overflow-hidden"
+              className="absolute top-2 right-2 md:top-8 md:right-10 z-60 text-2xl cursor-pointer text-white hover:text-gray-400 transition-colors duration-200 flex items-center justify-center rounded-full p-2 hover:bg-gray-700/50 overflow-hidden"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
               transition={{ duration: 0.2, ease: "easeInOut" }}

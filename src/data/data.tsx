@@ -35,11 +35,12 @@ interface SkillsDataProps {
     svg: string;
 }
 
+// Exportar los datos de proyectos y habilidades
 export const projectsData: ProjectsDataProps[] = [
     {
         id: 1,
         title: "AirNoBnb",
-        description: "Una plataforma de reservas de alojamientos similar a Airbnb, donde los usuarios pueden registrarse e iniciar sesion. Crear, modificar o eliminar alojamientos, también crear o eliminar reservas.",
+        description: "Una plataforma de reservas de alojamientos similar a Airbnb, donde los usuarios pueden registrarse e iniciar sesion. Crear, modificar o eliminar alojamientos, también crear o eliminar reservas. Se hizo uso de JWT para la autenticación y autorización de usuarios. Los alojamientos se almacenan en una base de datos MongoDB y las imágenes se suben a Cloudinary para su almacenamiento y gestión. También se implemento componentes externos como react-toast, keen-slider, MUI-datepicker, entre otros. El proyecto fue desarrollado con React y Tailwind CSS en el frontend, y Node.js, Express y MongoDB en el backend.",
         images: [
             {
                 src: "images/AirNoBnb/index.png",
@@ -192,7 +193,7 @@ export const projectsData: ProjectsDataProps[] = [
     {
         id: 3,
         title: "Chollosevero",
-        description: "Una aplicación web de comercio electrónico que permite a los usuarios registrarse, iniciar sesión, navegar por productos, crear, editar o eliminar nuevos productos. Los administradores pueden gestionar productos y usuarios.",
+        description: "Una aplicación web de comercio electrónico que permite a los usuarios encontrar los mejores chollos. También permite registrarse, iniciar sesión, navegar por productos, crear, editar o eliminar nuevos productos. Los administradores pueden gestionar productos y usuarios.",
         images: [
             {
                 src: "images/Chollosevero/index.png",
@@ -233,8 +234,8 @@ export const projectsData: ProjectsDataProps[] = [
                 icon: FaLaravel
             },
             {
-                title: "Tailwind CSS",
-                icon: RiTailwindCssFill
+                title: "Bootstrap",
+                icon: FaBootstrap
             },
             {
                 title: "MySQL",
@@ -246,7 +247,7 @@ export const projectsData: ProjectsDataProps[] = [
     {
         id: 4,
         title: "MercadoLibre",
-        description: "Una aplicación web que simula un clon de la conocida plataforma Mercado Libre. Hecha unicamente con HTML y CSS para mostrar productos, categorías y carrito de compras. También dispone de un formulario de login y registro.",
+        description: "Una aplicación web que simula un clon de la conocida plataforma Mercado Libre. Hecha unicamente con HTML y CSS para mostrar productos, categorías (la cual permite navegar entre estas) y carrito de compras. También dispone de un formulario de login y registro.",
         images: [
             {
                 src: "images/MercadoLibre/index.png",
@@ -279,8 +280,8 @@ export const projectsData: ProjectsDataProps[] = [
                 icon: FaHtml5
             },
             {
-                title: "Bootstrap",
-                icon: FaBootstrap
+                title: "CSS3",
+                icon: IoLogoCss3
             },
             {
                 title: "JavaScript",
@@ -371,6 +372,7 @@ export const projectsData: ProjectsDataProps[] = [
     }
 ]
 
+// Exportar los datos de habilidades
 export const skillsData: SkillsDataProps[] = [
     {
         title: "React",
@@ -394,7 +396,7 @@ export const skillsData: SkillsDataProps[] = [
     },
     {
         title: "JWT",
-        svg: "pendiente"
+        svg: "images/svg/jwt.svg"
     },
     {
         title: "Cloudinary",
@@ -446,7 +448,7 @@ export const skillsData: SkillsDataProps[] = [
     },
     {
         title: "Framer Motion",
-        svg: "pendiente"
+        svg: "images/svg/framerMotion.svg"
     },
     {
         title: "Astro",
