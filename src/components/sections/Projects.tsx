@@ -6,8 +6,8 @@ import { projectsData } from "../../data/data";
 
 
 export default function Proyects() {
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<null | typeof projectsData[0]>(null);
+  const [modalOpen, setModalOpen] = useState(false); // estado para controlar la visibilidad del modal
+  const [selectedProject, setSelectedProject] = useState<null | typeof projectsData[0]>(null); // estado para almacenar el proyecto seleccionado
 
   return (
     <section id="proyectos" className="w-full flex justify-center mb-30">

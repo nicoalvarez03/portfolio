@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { Reveal } from "../common/Reveal";
 
+// Variantes para el contenedor de las frases y palabras
 const containerVariants = {
     hidden: {opacity: 1},
     visible: (i: number) => ({
@@ -12,6 +13,7 @@ const containerVariants = {
     }),
 }
 
+// Variantes para cada palabra
 const word = {
     hidden: {opacity: 0, y: 20},
     visible: {

@@ -15,7 +15,8 @@ export default function Skills() {
     "HTML5",
     "CSS3",
     "Figma"
-  ];
+  ]; // Lista de habilidades frontend
+
   const backendSkills = [
     "Node.js",
     "Express",
@@ -27,15 +28,22 @@ export default function Skills() {
     "Cloudinary",
     "Java",
     "JWT"
-  ];
+  ]; // Lista de habilidades backend
+
   const toolsSkills = [
     "Git",
     "GitHub",
     "Terminal",
     "Visual Studio Code",
     "Wordpress",
-  ];
-  const learningSkills = ["Docker", "Symfony", "Next.js", ".NET"];
+  ]; // Lista de herramientas
+
+  const learningSkills = [
+    "Docker", 
+    "Symfony", 
+    "Next.js", 
+    ".NET"
+  ]; // Lista de habilidades que estás aprendiendo
 
   return (
     <section id="tecnologias" className="text-white mb-30">

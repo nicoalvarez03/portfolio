@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import BurgerComponent from "../common/BurgerComponent";
 import { useState, useEffect } from "react";
 
+// Variantes para animar el navbar completo
 const navbarVariants = {
   hidden: {},
   visible: {
@@ -11,6 +12,7 @@ const navbarVariants = {
   },
 };
 
+// variantes para animar los elementos del navbar
 const itemVariants = {
   hidden: { opacity: 0, y: -10 },
   visible: { opacity: 1, y: 0 },
@@ -37,6 +39,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // estado para manejar el menú desplegable
   const [isScrolled, setIsScrolled] = useState(false); // estado para manejar el scroll
 
+  // Función para manejar el clic en los elementos del menú
   const handleNavClick = (index: number) => {
     const section = document.getElementById(sectionId[index]);
     if (section) {
@@ -45,9 +48,10 @@ export default function Navbar() {
     }
   };
 
-  const DURATION = 0.25
-  const STAGGER = 0.025
+  const DURATION = 0.25 // Duración de la animación de las letras
+  const STAGGER = 0.025 // Retraso entre cada letra en la animación
 
+  // Componente para animar las letras de los enlaces del navbar
   const FlapLink = ({ children }: { children: string }) => {
     return (
       <motion.div

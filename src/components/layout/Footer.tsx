@@ -15,7 +15,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Nicolás Álvarez. Todos los
             derechos reservados.
           </p>
-          <p>Desarrollado con ❤️ usando React y Tailwind CSS</p>
+          <p>Desarrollado con ❤️ usando React, Tailwind CSS y Framer Motion</p>
         </div>
 
         <div>

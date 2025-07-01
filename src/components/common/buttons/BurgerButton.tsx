@@ -24,7 +24,7 @@ export default function BurgerButton({ isOpen }: Props) {
         d="M4 6L20 6"
         initial={{ opacity: 1 }}
         animate={isOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-        whileTap={{ scale: 0.9 }} // 🔥 animación de rebote al tocar
+        whileTap={{ scale: 0.9 }} 
         transition={{ type: "spring", stiffness: 300, damping: 15 }}
       />
       <motion.path

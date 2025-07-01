@@ -35,6 +35,7 @@ interface SkillsDataProps {
     svg: string;
 }
 
+// Exportar los datos de proyectos y habilidades
 export const projectsData: ProjectsDataProps[] = [
     {
         id: 1,
@@ -371,6 +372,7 @@ export const projectsData: ProjectsDataProps[] = [
     }
 ]
 
+// Exportar los datos de habilidades
 export const skillsData: SkillsDataProps[] = [
     {
         title: "React",

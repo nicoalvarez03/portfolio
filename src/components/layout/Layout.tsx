@@ -5,8 +5,9 @@ import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false); // Estado para manejar el scroll
 
+  // Efecto para detectar el scroll y actualizar el estado isScrolled
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 150);
