@@ -178,8 +178,8 @@ export default function ProjectModal({
                   Repositorio de github
                 </h3>
                 <ButtonSecondary className="flex gap-2 items-center">
-                  <FaGithub />
-                  <a href={repository} target="_blank">
+                  <a href={repository} target="_blank" className="flex justify-center items-center w-full h-full gap-2 p-3">
+                    <FaGithub />
                     Repositorio de github
                   </a>
                 </ButtonSecondary>
