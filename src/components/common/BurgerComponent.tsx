@@ -11,7 +11,7 @@ type Props = {
 export default function BurgerComponent({ isOpen, onClick, navItems, onNavClick }: Props) {
        return (
         <div className="relative z-60">
-          <button onClick={onClick} className="cursor-pointer z-70 relative">
+          <button onClick={onClick} className="cursor-pointer z-70 relative" aria-label='Boton hamburguesa menu'>
             <BurgerButton isOpen={isOpen} />
           </button>
     
