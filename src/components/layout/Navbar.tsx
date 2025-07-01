@@ -24,6 +24,7 @@ export default function Navbar() {
     "Tecnologias",
     "Contacto",
   ]; // defino los elementos del navbar
+
   const sectionId = navItems.map((item) =>
     item
       .toLowerCase()
@@ -44,6 +45,59 @@ export default function Navbar() {
     }
   };
 
+  const DURATION = 0.25
+  const STAGGER = 0.025
+
+  const FlapLink = ({ children }: { children: string }) => {
+    return (
+      <motion.div
+        className="relative block overflow-hidden whitespace-nowrap text-lg"
+        initial="initial"
+        whileHover="hovered"
+        transition={{
+          staggerChildren: 0.2
+        }}
+      >
+        <div>
+          {children.split("").map((l, i) => {
+            return <motion.span key={i}
+              className="inline-block"
+              variants={{
+                initial: { y: 0 },
+                hovered: { y: "-100%" },
+              }}
+              transition={{
+                duration: DURATION,
+                ease: "easeInOut",
+                delay: i * STAGGER, // Retraso para cada letra
+              }}
+            >
+              {l}
+            </motion.span>;
+          })}
+        </div>
+        <div className="absolute inset-0">
+          {children.split("").map((l, i) => {
+            return <motion.span key={i}
+            className="inline-block"
+            variants={{
+              initial: { y: "100%" },
+              hovered: { y: 0 },
+            }}
+            transition={{
+              duration: DURATION,
+              ease: "easeInOut",
+              delay: i * STAGGER, // Retraso para cada letra
+            }}
+            >
+              {l}
+            </motion.span>;
+          })}
+        </div>
+      </motion.div>
+    );
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10); // Cambia el estado si se ha hecho scroll
@@ -61,7 +115,7 @@ export default function Navbar() {
 
   return (
     <div className="relative">
-        {/* Menu de movil */}
+      {/* Menu de movil */}
       <div className="lg:hidden fixed top-5 right-5 z-60">
         <BurgerComponent
           isOpen={menuOpen}
@@ -111,7 +165,7 @@ export default function Navbar() {
                       }
                     }}
                   >
-                    {item}
+                    <FlapLink>{item}</FlapLink>
                   </motion.li>
                 ))}
               </motion.ul>
@@ -119,7 +173,6 @@ export default function Navbar() {
           </div>
         </motion.nav>
       </header>
-      
     </div>
   );
 }
