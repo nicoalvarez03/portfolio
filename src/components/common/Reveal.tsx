@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, type JSX} from "react";
+import {useEffect, useRef, type JSX} from "react";
 import {motion, useInView, useAnimation} from "framer-motion";
 
 interface Props {
