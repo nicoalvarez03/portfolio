@@ -82,11 +82,11 @@ export default function ProyectCard({
           </Reveal>
           <ul className="flex gap-2">
             {tecnologies?.map((Tech, index) => (
-              <Reveal key={index}>
-                <li className="text-white text-xl font-semibold">
+              <li className="text-white text-xl font-semibold">
+                <Reveal key={index}>
                   <Tech.icon />
-                </li>
-              </Reveal>
+                </Reveal>
+              </li>
             ))}
           </ul>
           {isMobile && (
@@ -96,7 +96,6 @@ export default function ProyectCard({
               </span>
             </Reveal>
           )}
-          
         </motion.div>
 
         <motion.div
@@ -107,12 +106,12 @@ export default function ProyectCard({
           <ButtonPrimary onClick={onClick}>Ver más</ButtonPrimary>
         </motion.div>
         {isTapped && (
-            <Reveal className="absolute bottom-5 right-5">
-              <span className="text-black text-sm font-semibold">
-                Toca nuevamente para cerrar
-              </span>
-            </Reveal>
-          )}
+          <Reveal className="absolute bottom-5 right-5">
+            <span className="text-black text-sm font-semibold">
+              Toca nuevamente para cerrar
+            </span>
+          </Reveal>
+        )}
       </motion.div>
     </Reveal>
   );

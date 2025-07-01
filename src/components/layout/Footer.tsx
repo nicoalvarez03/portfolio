@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub } from "react-icons/fa";
 export default function Footer() {
   return (
     <motion.footer
-      className="text-white py-8 bg-black/40 backdrop-blur-lg shadow-lg z-40"
+      className="text-white py-8 bg-gray-500/30 backdrop-blur-lg shadow-lg z-40"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
@@ -23,7 +23,7 @@ export default function Footer() {
             <FaLinkedin className="inline-block mx-2 text-2xl hover:text-[#0077b5] transition-colors duration-300" />
           </a>
           <a href="https://github.com/nicoalvarez03?tab=repositories" target="_blank">
-            <FaGithub className="inline-block mx-2 text-2xl hover:text-[#333] transition-colors duration-300" />
+            <FaGithub className="inline-block mx-2 text-2xl hover:text-[#5f5f5f] transition-colors duration-300" />
           </a>
         </div>
       </div>

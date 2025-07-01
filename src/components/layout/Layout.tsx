@@ -38,6 +38,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
+            aria-label="Scroll hacia arriba"
           >
             <ArrowUp />
           </motion.a>
