@@ -82,8 +82,8 @@ export default function ProyectCard({
           </Reveal>
           <ul className="flex gap-2">
             {tecnologies?.map((Tech, index) => (
-              <li className="text-white text-xl font-semibold">
-                <Reveal key={index}>
+              <li className="text-white text-xl font-semibold" key={index}>
+                <Reveal >
                   <Tech.icon />
                 </Reveal>
               </li>

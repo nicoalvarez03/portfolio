@@ -125,17 +125,14 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex justify-center mt-10 mb-20 md:mb-0 md:mt-20">
-            <motion.button
-              onClick={() => {
-                const section = document.getElementById("proyectos");
-                if (section) {
-                  section.scrollIntoView({ behavior: "smooth" });
-                }
-              }}
-              aria-label="Scroll hacia proyectos"
-            >
-              <ArrowDown />
-            </motion.button>
+              <ArrowDown 
+                onClick={() => {
+                  const section = document.getElementById("proyectos");
+                  if (section) {
+                    section.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              />
           </div>
         </div>
       </div>
